@@ -1,0 +1,2 @@
+# app-ads.txt for Woodland Reveal (BAIHAT LABS)
+google.com, pub-1780605016275005, DIRECT, f08c47fec0942fa0

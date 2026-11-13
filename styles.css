@@ -1,0 +1,276 @@
+:root {
+  --wood: #8a4b1c;
+  --wood-dark: #5c2f0f;
+  --honey: #f2b84b;
+  --ink: #2a1a0e;
+  --muted: #6b5644;
+  --line: #ead9c3;
+  --bg: #fbf5ec;
+  --card: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--wood);
+  text-decoration: underline;
+  text-decoration-color: rgba(138, 75, 28, 0.35);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 3px solid var(--honey);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.skip {
+  position: absolute;
+  left: -999px;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 20;
+  background: var(--card);
+  padding: 0.5rem 0.8rem;
+}
+
+.wrap {
+  width: min(760px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(251, 245, 236, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: url('/app_icon.png') center/cover no-repeat;
+  box-shadow: 0 3px 10px rgba(60, 30, 5, 0.22);
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+}
+
+.nav-links a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 3rem 0 2rem;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.hero-icon {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  box-shadow: 0 10px 24px rgba(60, 30, 5, 0.22), 0 2px 6px rgba(60, 30, 5, 0.1);
+  border: 2px solid #ffffff;
+  display: block;
+}
+
+.hero h1 {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.85rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.hero .tagline {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--wood);
+}
+
+.hero p {
+  margin: 0;
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.75rem 1.15rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--wood);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--wood-dark);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1.25rem 1.35rem;
+  margin: 0.85rem 0;
+}
+
+.card h2,
+.card h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.page {
+  padding: 2.25rem 0 3.5rem;
+}
+
+.page h1 {
+  margin: 0 0 0.35rem;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.lede {
+  margin: 0 0 1.75rem;
+  color: var(--muted);
+}
+
+.page h2 {
+  margin: 1.75rem 0 0.55rem;
+  font-size: 1.15rem;
+}
+
+.page p,
+.page li {
+  color: #3d2a1a;
+}
+
+.page ul {
+  padding-left: 1.2rem;
+}
+
+.page li {
+  margin: 0.3rem 0;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 560px) {
+  .nav-links {
+    gap: 0.75rem;
+    font-size: 0.88rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
